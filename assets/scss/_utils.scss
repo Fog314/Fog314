@@ -1,0 +1,11 @@
+$browser-context: 16; // Default 16px font-size
+
+@function px-to-em ($size: 16) {
+    @if $size==0 {
+        @return 0;
+    }
+
+    @else {
+        @return math.div($size, $browser-context * 1em);
+    }
+}
